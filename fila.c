@@ -3,37 +3,25 @@
 #include <stdlib.h>
 #include "fila.h"
 
-//Criação da fila dinâmica
 Fila* criar_fila(){
-    //Alocado memoria na fila
     Fila* f = malloc(sizeof(Fila));
-    //Inicializando o inicio e fim
     f->inicio = NULL;
     f->fim = NULL;
     f->qtd = 0;
 
     return f;
 }
-
-//Função que verifica se está vazio
 bool isEmpty(Fila* f){
     return f->inicio == NULL;
-}
 
-//Função que inserer valor na fila
 void inserir(Fila* f, char valor){
-    //Alocando a memoria para um novo valor
     No* novo = malloc(sizeof(No));
-    //Novo valor recebe o valor atual
     novo->letra = valor;
-    //Avança para o próximo valor
     novo->prox = NULL;
-    //Se a fila estiver vazia inicio e fim recebe novo Nó
     if(isEmpty(f)){
         f->fim = novo;
         f->inicio = novo;
     }else{
-    //Se não o fim recebe esse valor e o fim avança para o próximo valor
         f->fim->prox = novo;
         f->fim = novo;
     }
