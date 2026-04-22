@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1776884850 source:c:\users\stats\onedrive\documentos\fila-dic\fila.c
+	<stdio.h>
+	<stdbool.h>
+	<stdlib.h>
+	"fila.h"
+
+1776880657 c:\users\stats\onedrive\documentos\fila-dic\fila.h
+	<stdbool.h>
+
+1776883620 source:c:\users\stats\onedrive\documentos\fila-dic\main.c
+	<stdio.h>
+	"fila.h"
+	<locale.h>
+
